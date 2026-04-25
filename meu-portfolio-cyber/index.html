@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SN DESIGN | DIGITAL FRONTIER</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+          }
+        }
+    </script>
+</head>
+<body>
+    <div class="crt-overlay"></div>
+
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loader-glitch">SN_BOOT_SEQUENCE</div>
+            <div class="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <span class="logo-main">SN</span><span class="logo-sub">SYSTEMS</span>
+        </div>
+        <div id="audio-control" class="glass-ui">
+            <svg id="icon-unmute" viewBox="0 0 24 24"><path fill="currentColor" d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16.04C15.5,15.3 16.5,13.77 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg>
+            <svg id="icon-mute" viewBox="0 0 24 24" style="display:none;"><path fill="currentColor" d="M12,4L9.91,6.09L12,8.18V4M14.92,11L17,13.08C17.42,12.74 17.77,12.39 18.06,12C18.66,11.05 19,9.5 19,8C19,4.74 16.39,2.1 13.5,2.1C12.44,2.1 11.45,2.43 10.61,3L12.55,4.94L14.92,11M2.27,2.27L1,3.54L5.46,8H3V14H7L12,19V14.54L16.21,18.75C15.42,19.33 14.5,19.74 13.5,19.9V21.9C15,21.72 16.4,21.19 17.62,20.35L20.46,23.19L21.73,21.92L2.27,2.27M14,10.64L16,12.64V12.74C16,14.61 14.9,16.21 13.3,16.94V18.91C15.9,18.11 18,15.63 18,12.74C18,12 17.86,11.28 17.62,10.62L14,10.64Z" /></svg>
+        </div>
+    </header>
+
+    <div id="three-container"></div>
+
+    <div class="hero-content">
+        <div class="ui-tag">// NEURAL_INTERFACE_v2.0</div>
+        <h1 class="hero-title">UI/UX <span class="green">DESIGN</span></h1>
+        <p class="hero-desc">Arquitetura de sistemas visuais e experiências digitais de alta performance.</p>
+        
+        <div class="glass-card">
+            <div class="services-grid">
+                <div class="service-item"><span class="dot"></span> LOGOMARCAS</div>
+                <div class="service-item"><span class="dot"></span> WEB SYSTEMS</div>
+                <div class="service-item"><span class="dot"></span> UI/UX DESIGN</div>
+                <div class="service-item"><span class="dot"></span> ART DIRECTION</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-indicator">
+        <span class="line"></span>
+        <p>INTERACT_WITH_CYBORG</p>
+    </div>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>

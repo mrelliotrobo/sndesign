@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&family=Syncopate:wght@700&display=swap');
+
+:root {
+    --neon: #39ff14;
+    --dark: #020204;
+    --glass: rgba(255, 255, 255, 0.03);
+}
+
+body {
+    margin: 0; background-color: var(--dark);
+    color: white; font-family: 'Space Grotesk', sans-serif;
+    overflow: hidden;
+}
+
+/* Efeito CRT/Scanline */
+.crt-overlay {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    background-size: 100% 4px, 3px 100%; z-index: 10; pointer-events: none;
+}
+
+#three-container { position: fixed; z-index: 1; }
+
+/* UI Refinada */
+header {
+    position: absolute; top: 0; width: 100%; padding: 40px 60px;
+    z-index: 100; display: flex; justify-content: space-between; align-items: center;
+    box-sizing: border-box;
+}
+
+.logo-main { font-family: 'Syncopate', sans-serif; font-size: 1.5rem; letter-spacing: 2px; }
+.logo-sub { color: var(--neon); text-shadow: 0 0 10px var(--neon); }
+
+.glass-ui {
+    background: var(--glass); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1); padding: 12px;
+    border-radius: 50%; cursor: pointer; color: var(--neon);
+}
+
+.hero-content {
+    position: absolute; top: 50%; left: 8%; transform: translateY(-50%);
+    z-index: 20; max-width: 550px; pointer-events: none;
+}
+
+.ui-tag { font-size: 0.7rem; color: var(--neon); letter-spacing: 3px; margin-bottom: 10px; opacity: 0.8; }
+.hero-title { font-size: 6rem; font-weight: 700; margin: 0; line-height: 0.8; letter-spacing: -2px; }
+.green { color: var(--neon); text-shadow: 0 0 30px rgba(57, 255, 20, 0.5); }
+.hero-desc { margin: 30px 0; font-size: 1.1rem; color: #888; border-left: 2px solid var(--neon); padding-left: 20px; }
+
+.glass-card {
+    background: var(--glass); backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.05); padding: 25px;
+    border-radius: 4px; pointer-events: auto;
+}
+
+.services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.service-item { font-size: 0.7rem; letter-spacing: 2px; display: flex; align-items: center; }
+.dot { width: 4px; height: 4px; background: var(--neon); margin-right: 10px; box-shadow: 0 0 8px var(--neon); }
+
+.scroll-indicator {
+    position: absolute; bottom: 40px; right: 60px; text-align: right;
+    font-size: 0.6rem; letter-spacing: 5px; color: var(--neon);
+}
+.line { display: block; width: 40px; height: 1px; background: var(--neon); margin-left: auto; margin-top: 10px; }
+
+/* Preloader */
+#loading-screen {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--dark); z-index: 1000; display: flex; justify-content: center; align-items: center;
+}
+#progress-bar { height: 1px; background: var(--neon); box-shadow: 0 0 15px var(--neon); transition: width 0.4s ease; }
